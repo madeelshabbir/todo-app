@@ -14,9 +14,9 @@ public class HelloController {
   }
 
 
-  @RequestMapping("hello/say-in-html")
+  @RequestMapping("hello/say-html")
   @ResponseBody
-  public String sayInHtml() {
+  public String sayHtml() {
     StringBuffer buffer = new StringBuffer();
     buffer.append("<html>");
     buffer.append("<head>");
@@ -27,5 +27,10 @@ public class HelloController {
     buffer.append("</body>");
     buffer.append("</html>");
     return buffer.toString();
+  }
+
+  @RequestMapping("hello/say-jsp")
+  public String sayJSP() {
+    return "sayHello";
   }
 }
